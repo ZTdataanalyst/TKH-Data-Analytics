@@ -29,7 +29,7 @@
     }
   },
 
-  "postCreateCommand": "pip install -r requirements.txt && pip install -e utils/ && python -m ipykernel install --user --name tkh --display-name 'TKH Data Science' && jupyter nbextension enable --py widgetsnbextension",
+  "postCreateCommand": "pip install -r requirements.txt && (pip install -e utils/ || true) && python -m ipykernel install --user --name tkh --display-name 'TKH Data Science'",
 
   "remoteEnv": {
     "PYTHONPATH": "${containerWorkspaceFolder}"
